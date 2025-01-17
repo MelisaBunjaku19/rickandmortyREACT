@@ -1,0 +1,65 @@
+
+body {
+    background-color: #1a1d3c;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+.ipc-page-wrapper {
+    display: flex;
+    position: relative;
+    width: 100%;
+    font-family: 'Press Start 2P', cursive, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: #fff; 
+}
+
+
+.ipc-page-wrapper--baseAlt, .ipc-pager {
+    color: #fff;
+}
+
+/*accentuation of each letter's edges*/
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #14b1c7;
+    -webkit-text-stroke: 2px #45804c; 
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+
+
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid #00c6ff;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+.form-group label {
+    color: #00c6ff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+.card-title {
+    font-size: 1.5rem;
+    color: greenyellow;
+    text-shadow: 0 0 5px #00c6ff, 0 0 10px #00c6ff;
+}

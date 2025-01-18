@@ -234,6 +234,55 @@ const CharacterList = () => {
                 checked={filters.species.includes('Alien')}
                 onChange={handleFilterChange}
               />
+               <Form.Check
+                type="checkbox"
+                label={t("Humanoid")}
+                value="Humanoid"
+                name="species"
+                checked={filters.species.includes('Humanoid')}
+                onChange={handleFilterChange}
+              />
+               <Form.Check
+                type="checkbox"
+                label={t("Animal")}
+                value="Animal"
+                name="species"
+                checked={filters.species.includes('Animal')}
+                onChange={handleFilterChange}
+              />
+               <Form.Check
+                type="checkbox"
+                label={t("Mythological Creature")}
+                value="Mythological Creature"
+                name="species"
+                checked={filters.species.includes('Mythological Creature')}
+                onChange={handleFilterChange}
+              />
+               <Form.Check
+                type="checkbox"
+                label={t("unknown")}
+                value="unknown"
+                name="species"
+                checked={filters.species.includes('unknown')}
+                onChange={handleFilterChange}
+              />
+               <Form.Check
+                type="checkbox"
+                label={t("Robot")}
+                value="Robot"
+                name="species"
+                checked={filters.species.includes('Robot')}
+                onChange={handleFilterChange}
+              />
+               <Form.Check
+                type="checkbox"
+                label={t("Cronenberg")}
+                value="Cronenberg"
+                name="species"
+                checked={filters.species.includes('Cronenberg')}
+                onChange={handleFilterChange}
+              />
+
             </Form.Group>
           </Col>
           <Col md={3} className="d-flex flex-column justify-content-end align-items-start">

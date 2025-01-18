@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Dropdown } from 'react-bootstrap';
-import { FaLanguage } from 'react-icons/fa'; // FontAwesome language icon
+import { FaGlobe, FaFlag } from 'react-icons/fa'; // Use FaGlobe for the globe icon
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -16,43 +16,83 @@ const LanguageSwitcher = () => {
 
   return (
     <div style={styles.container}>
-      <Dropdown
+   <Dropdown
         show={isDropdownOpen}
         onToggle={() => setIsDropdownOpen(!isDropdownOpen)}
         autoClose="outside"
       >
         <Dropdown.Toggle variant="link" id="language-dropdown" style={styles.toggle}>
-          <FaLanguage style={styles.icon} />
+          <FaGlobe style={styles.icon} /> {/* Globe icon for the language toggle */}
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
-          <Dropdown.Item onClick={() => handleLanguageChange('en')}>English</Dropdown.Item>
-          <Dropdown.Item onClick={() => handleLanguageChange('de')}>German</Dropdown.Item>
-          <Dropdown.Item onClick={() => handleLanguageChange('al')}>Shqip</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleLanguageChange('en')}>
+            <div style={styles.languageItem}>
+              <FaFlag style={styles.flagIcon} />
+              <span style={styles.languageText}>English</span>
+            </div>
+          </Dropdown.Item>
+          <Dropdown.Item onClick={() => handleLanguageChange('de')}>
+            <div style={styles.languageItem}>
+              <FaFlag style={styles.flagIcon} />
+              <span style={styles.languageText}>German</span>
+            </div>
+          </Dropdown.Item>
+          <Dropdown.Item onClick={() => handleLanguageChange('al')}>
+            <div style={styles.languageItem}>
+              <FaFlag style={styles.flagIcon} />
+              <span style={styles.languageText}>Shqip</span>
+            </div>
+          </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
     </div>
   );
 };
 
-const styles = {
-  container: {
-    position: 'fixed', // Changed to fixed to ensure it's always visible at the bottom
-    bottom: '10px',
-    right: '20px',
-    zIndex: 1000, // Ensures it stays on top of other content
-  },
-  toggle: {
-    background: 'transparent',
-    border: 'none',
-    fontSize: '1.5rem',
-    color: '#333',
-    cursor: 'pointer',
-  },
-  icon: {
-    fontSize: '1.5rem',
-    color: '#333',
-  },
-};
+  const styles = {
+
+      container: {
+        position: 'fixed',
+        bottom: '10px',
+        right: '5px',
+        zIndex: 1000,
+      },
+      toggle: {
+        background: '#45804c',
+        border: 'none',
+        borderRadius: '50%',
+        padding: '10px',
+        fontSize: '1.5rem',
+        color: '#fff',
+        cursor: 'pointer',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+        transition: 'all 0.3s ease',
+        margin: '5px'
+      },
+      toggleHover: {
+        background: '#8ab32b', 
+      },
+    
+      icon: {
+        fontSize: '1.5rem',
+        color: '#fff', // 
+      },
+      languageItem: {
+        display: 'flex',
+        alignItems: 'center',
+        padding: '5px 10px',
+      },
+      flagIcon: {
+        fontSize: '1.5rem',  // Size of the world icon
+        borderRadius: '50%', // Circular shape
+        backgroundColor: '#45804c',  // Light background
+        padding: '5px', // Padding to make it circular
+        marginRight: '20px',
+      },
+      languageText: {
+        fontSize: '1rem',
+      },
+    };
 
 export default LanguageSwitcher;

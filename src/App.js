@@ -5,8 +5,8 @@ import LanguageSwitcher from './components/LanguageSwitcher';
 
 const App = () => (
   <div>
-    <LanguageSwitcher />  {/* Ensure this is placed where you want the language switcher */}
-    <CharacterList />  {/* This component will now reflect the selected language */}
+    <LanguageSwitcher />  
+    <CharacterList />  
   </div>
 );
 

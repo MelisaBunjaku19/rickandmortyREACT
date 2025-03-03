@@ -4,6 +4,9 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   en: {
     translation: {
+      English: "English",
+      German: "German",
+      Albanian: "Albanian",
        Name: "Names",
       Status: "Status",
       Species: "Species",
@@ -48,6 +51,9 @@ const resources = {
   },
   de: {
     translation: {
+      German: "Deutsche",
+      English: "Englisch",
+      Albanian: "Albanisch",
       Name: "Namen",
       Status: "Status",
       Species: "Art",
@@ -92,6 +98,9 @@ const resources = {
   },
   al: {
     translation: {
+      Albanian: "Shqip",
+      English: "Anglisht",
+      German:"Gjermanisht",
       Name: "Emrat",
       Status: "Gjendja",
       Species: "Specia",

@@ -16,5 +16,5 @@ jobs:
       - name: Deploy to Render
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
-          service-id: srv-cv5dtu0fnakc73erql1g
-          api-key: ${{ secrets.RENDER_API_KEY }} # API key must be stored in GitHub Secrets
+          service-id: srv-cv5dtu0fnakc73erql1g  # Correct Render service ID
+          api-key: ${{ secrets.RENDER_API_KEY }}  # Secret API key stored in GitHub Secrets

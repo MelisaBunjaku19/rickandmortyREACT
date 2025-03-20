@@ -1,19 +1,15 @@
-name: Deploy React App to Render
+name: Project Deploy
 
 on:
   push:
-    branches:
-      - master  # Change if you're using a different branch
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      
-      # Trigger deployment on Render
       - name: Deploy to Render
         run: |
           curl -X POST "https://api.render.com/deploy/srv-cv5dtu0fnakc73erql1g?key=71tbIcIZZpg"

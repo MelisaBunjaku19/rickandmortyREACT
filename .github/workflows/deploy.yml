@@ -3,7 +3,7 @@ name: Deploy React App to Cloud
 on:
   push:
     branches:
-      - main  # or your default branch
+      - master
 
 jobs:
   build_and_deploy:
@@ -29,6 +29,4 @@ jobs:
       # Trigger deployment on Render
       - name: Deploy to Render
         run: |
-          curl -X POST https://api.render.com/deploy/svc-YOUR_SERVICE_ID-HOOK_URL # Replace with your Render deploy hook URL
-        env:
-          RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}  # Optional: If you need to use an API key for additional Render interactions
+          curl -X POST "https://api.render.com/deploy/srv-cv5dtu0fnakc73erql1g?key=71tbIcIZZpg"

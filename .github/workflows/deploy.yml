@@ -2,14 +2,19 @@ name: Project Deploy
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
       - name: Deploy to Render
-        run: |
-          curl -X POST "https://api.render.com/deploy/srv-cv5dtu0fnakc73erql1g?key=71tbIcIZZpg"
+        uses: sws2apps/render-deploy@main
+        with:
+          service_id: srv-cv5dtu0fnakc73erql1g
+          api_key: ${{ secrets.RENDER_API_KEY }}

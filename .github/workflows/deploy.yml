@@ -17,5 +17,4 @@ jobs:
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
           service-id: srv-cv5dtu0fnakc73erql1g
-          api-key: ${{ secrets.RENDER_API_KEY }}
-          wait-for-success: true
+          api-key: ${{ secrets.RENDER_API_KEY }} # API key must be stored in GitHub Secrets

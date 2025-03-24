@@ -7,14 +7,14 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4  
 
       - name: Deploy to Render
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
           service-id: srv-cv5dtu0fnakc73erql1g  # Correct Render service ID
-          api-key: ${{ secrets.RENDER_API_KEY }}  # Secret API key stored in GitHub Secrets
+          api-key: ${{ secrets.RENDER_API_KEY }}  # Ensure secret is correctly stored
